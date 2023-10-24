@@ -1,12 +1,12 @@
-# QoQtel: ゲームコントローラーで量子計算を学ぼう
+# CoQtel: ゲームコントローラーで量子計算を学ぼう
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/QoQtel.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/your-username/QoQtel/stargazers/) [![GitHub forks](https://img.shields.io/github/forks/your-username/QoQtel.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/your-username/QoQtel/network/) [![GitHub issues](https://img.shields.io/github/issues/your-username/QoQtel.svg)](https://GitHub.com/your-username/QoQtel/issues/)
+[![GitHub stars](https://img.shields.io/github/stars/your-username/CoQtel.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/stargazers/) [![GitHub forks](https://img.shields.io/github/forks/your-username/CoQtel.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/network/) [![GitHub issues](https://img.shields.io/github/issues/your-username/CoQtel.svg)](https://GitHub.com/your-username/CoQtel/issues/)
 
-![QoQtel Banner](path-to-your-banner-image)
+![CoQtel Banner](path-to-your-banner-image)
 
 ## 🌟 プロジェクト概要
 
-QoQtelは、ゲームコントローラーを用いて直感的に量子状態と量子計算を学ぶことができる革新的なシミュレーターアプリです。このアプリを利用することで、ユーザーはブロッホ球を介して量子状態を視覚的に理解し、ゲームコントローラーを使って量子ゲートを作用させることができます。UnityとPython、そしてQiskitを駆使して作られたこのアプリは、量子の世界に興味を持ち始めた人々にとって非常に魅力的な学習ツールとなるでしょう。
+CoQtelは、ゲームコントローラーを用いて直感的に量子状態と量子計算を学ぶことができる革新的なシミュレーターアプリです。このアプリを利用することで、ユーザーはブロッホ球を介して量子状態を視覚的に理解し、ゲームコントローラーを使って量子ゲートを作用させることができます。UnityとPython、そしてQiskitを駆使して作られたこのアプリは、量子の世界に興味を持ち始めた人々にとって非常に魅力的な学習ツールとなるでしょう。
 
 ## 🎮 機能
 
@@ -25,7 +25,7 @@ QoQtelは、ゲームコントローラーを用いて直感的に量子状態�
 
 ## 👥 コミュニティとコントリビューション
 
-QoQtelはコミュニティ主導のプロジェクトであり、皆さんの貢献を歓迎しています！バグの報告、新機能の提案、ドキュメントの改善など、どのような形の貢献も大歓迎です。コントリビューションガイドとコードオブコンダクトは[コントリビューションガイド](#)と[コードオブコンダクト](#)で確認できます。
+CoQtelはコミュニティ主導のプロジェクトであり、皆さんの貢献を歓迎しています！バグの報告、新機能の提案、ドキュメントの改善など、どのような形の貢献も大歓迎です。コントリビューションガイドとコードオブコンダクトは[コントリビューションガイド](#)と[コードオブコンダクト](#)で確認できます。
 
 ## 📜 ライセンス
 
@@ -37,6 +37,6 @@ QoQtelはコミュニティ主導のプロジェクトであり、皆さんの�
 
 ---
 
-🚀 **QoQtelを始めて、量子の世界を探機しよう！** 🚀
+🚀 **CoQtelを始めて、量子の世界を探機しよう！** 🚀
 
 ---
