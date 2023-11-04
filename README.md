@@ -1,10 +1,8 @@
-img[alt=drawing] { width: 200px; }
-
 # CoQtel: ゲームコントローラーで量子計算を学ぼう
 
 [![GitHub stars](https://img.shields.io/github/stars/your-username/CoQtel.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/stargazers/) [![GitHub forks](https://img.shields.io/github/forks/your-username/CoQtel.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/network/) [![GitHub issues](https://img.shields.io/github/issues/your-username/CoQtel.svg)](https://GitHub.com/your-username/CoQtel/issues/)
 
-![drawing][CoQtel Banner](https://github.com/nyuuton/CoQtel/blob/main/CoQtel_icon.png)
+[CoQtel Banner]<img src="https://github.com/nyuuton/CoQtel/blob/main/CoQtel_icon.png" width="48">
 
 ## 🌟 プロジェクト概要
 
