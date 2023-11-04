@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/your-username/CoQtel.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/stargazers/) [![GitHub forks](https://img.shields.io/github/forks/your-username/CoQtel.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/your-username/CoQtel/network/) [![GitHub issues](https://img.shields.io/github/issues/your-username/CoQtel.svg)](https://GitHub.com/your-username/CoQtel/issues/)
 
-![CoQtel Banner](path-to-your-banner-image)
+![CoQtel Banner](https://github.com/nyuuton/CoQtel/blob/main/CoQtel_icon.png)
 
 ## 🌟 プロジェクト概要
 
