@@ -8,41 +8,8 @@ import qiskit
 from qiskit import QuantumCircuit, execute
 from qiskit.providers.aer import QasmSimulator
 
-with open("circuit.csv", "r", encoding="utf-8") as f:
-    reader = csv.reader(f)
-    row = [r for r in reader]
-
-
-header = 'OPENQASM 2.0;\ninclude "qelib1.inc";'
-circuit = []
-target = 0
-for step in range(len(row)):
-    for qubit in range(len(row[0])):
-        if row[step][qubit] != '0':
-            if "c" in row[step]:
-                if target == 1:
-                    circuit.append("q["+str(qubit)+"];")
-                    target = 0
-                else:
-                    circuit.append(row[step][qubit]+" q["+str(qubit)+"],")
-                    target = 1
-            elif row[step][qubit] == "swap":
-                print("swap")
-            else:
-            #print(step,row[step][qubit]+" q["+str(qubit)+"];")
-                if row[step][qubit] == "p":
-                    circuit.append(row[step][qubit]+"(pi) q["+str(qubit)+"];")   
-                else:
-                    circuit.append(row[step][qubit]+" q["+str(qubit)+"];")
-
-print(header, file=codecs.open('circuit.qasm','w','utf-8'))
-print("qreg q["+str(len(row[0]))+"];", file=codecs.open('circuit.qasm','a','utf-8'))
-for i in range(len(circuit)):
-    print(circuit[i], file=codecs.open('circuit.qasm','a','utf-8'))
-
-
 qc = QuantumCircuit.from_qasm_file("circuit.qasm")
-#qc.draw()
+qc.draw()
 qc.save_statevector()
 
 backend = QasmSimulator()

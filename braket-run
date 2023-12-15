@@ -1,0 +1,68 @@
+#!/usr/bin/python3
+
+import sys
+import numpy as np
+import codecs
+from braket.circuits import Circuit
+from braket.aws import AwsDevice
+import qiskit
+from qiskit import QuantumCircuit, execute
+from qiskit.providers.aer import QasmSimulator
+
+class QuantumExecutor:
+    def __init__(self, device_name):
+        self.device_name = device_name
+        self.device = None
+        self.backend = None
+
+    def select_device(self):
+        if self.device_name == "IonQ":
+            self.device = AwsDevice("arn:aws:braket:::device/qpu/ionq/ionQdevice")
+        elif self.device_name == "Oxford Quantum Circuits":
+            self.device = AwsDevice("arn:aws:braket:::device/qpu/oxford-quantum-circuits/Lucy")
+        elif self.device_name == "QuEra":
+            self.device = AwsDevice("arn:aws:braket:::device/qpu/quera/processor")
+        elif self.device_name == "Rigetti":
+            self.device = AwsDevice("arn:aws:braket:::device/qpu/rigetti/Aspen-11")
+        elif self.device_name == "Qiskit":
+            # ローカルのシミュレーターを使用
+            self.backend = QasmSimulator()
+        else:
+            raise ValueError("Unsupported device.")
+
+    def execute_circuit(self, circuit_file, output_file):
+        if self.backend:
+            # Qiskitの処理
+            qc = QuantumCircuit.from_qasm_file(circuit_file)
+            qc.save_statevector()
+            job = execute(qc, self.backend, shots=1000)
+            result = job.result()
+
+            # 状態ベクトルの取得と書き込み
+            state_vector = result.get_statevector()
+            self._write_statevector(state_vector, output_file)
+        elif self.device:
+            # Amazon Braketの処理
+            circuit = Circuit().from_qasm(circuit_file)
+            task = self.device.run(circuit, shots=1000)
+            result = task.result()
+            self._write_results(result.measurements, output_file)
+        else:
+            raise ValueError("Device not selected.")
+    
+    def _write_statevector(self, state_vector, output_file):
+        with codecs.open(output_file, 'w', 'utf-8') as file:
+            for i in range(len(np.asarray(state_vector))):
+                file.write(str(state_vector[i].real) + "\t" + str(state_vector[i].imag) + "\n")
+
+    def _write_results(self, results, output_file):
+        with codecs.open(output_file, 'w', 'utf-8') as file:
+            for measurement in results:
+                file.write(str(measurement) + '\n')
+
+# メインの実行部分
+if __name__ == "__main__":
+    device_name = sys.argv[1]
+    executor = QuantumExecutor(device_name)
+    executor.select_device()
+    executor.execute_circuit("circuit.qasm", "qubitstate_mem.txt")
